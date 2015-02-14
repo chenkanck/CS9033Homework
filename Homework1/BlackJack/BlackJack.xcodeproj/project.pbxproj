@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66B73BF71A8FF428008D529D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B73BF61A8FF428008D529D /* AppDelegate.swift */; };
+		66B73BF91A8FF428008D529D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B73BF81A8FF428008D529D /* ViewController.swift */; };
+		66B73BFC1A8FF428008D529D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B73BFA1A8FF428008D529D /* Main.storyboard */; };
+		66B73BFE1A8FF428008D529D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66B73BFD1A8FF428008D529D /* Images.xcassets */; };
+		66B73C011A8FF428008D529D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66B73BFF1A8FF428008D529D /* LaunchScreen.xib */; };
+		66B73C0D1A8FF428008D529D /* BlackJackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B73C0C1A8FF428008D529D /* BlackJackTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66B73C071A8FF428008D529D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66B73BE91A8FF428008D529D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66B73BF01A8FF428008D529D;
+			remoteInfo = BlackJack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		66B73BF11A8FF428008D529D /* BlackJack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackJack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66B73BF51A8FF428008D529D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66B73BF61A8FF428008D529D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		66B73BF81A8FF428008D529D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66B73BFB1A8FF428008D529D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		66B73BFD1A8FF428008D529D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		66B73C001A8FF428008D529D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		66B73C061A8FF428008D529D /* BlackJackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackJackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66B73C0B1A8FF428008D529D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66B73C0C1A8FF428008D529D /* BlackJackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66B73BEE1A8FF428008D529D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B73C031A8FF428008D529D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66B73BE81A8FF428008D529D = {
+			isa = PBXGroup;
+			children = (
+				66B73BF31A8FF428008D529D /* BlackJack */,
+				66B73C091A8FF428008D529D /* BlackJackTests */,
+				66B73BF21A8FF428008D529D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		66B73BF21A8FF428008D529D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66B73BF11A8FF428008D529D /* BlackJack.app */,
+				66B73C061A8FF428008D529D /* BlackJackTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66B73BF31A8FF428008D529D /* BlackJack */ = {
+			isa = PBXGroup;
+			children = (
+				66B73BF61A8FF428008D529D /* AppDelegate.swift */,
+				66B73BF81A8FF428008D529D /* ViewController.swift */,
+				66B73BFA1A8FF428008D529D /* Main.storyboard */,
+				66B73BFD1A8FF428008D529D /* Images.xcassets */,
+				66B73BFF1A8FF428008D529D /* LaunchScreen.xib */,
+				66B73BF41A8FF428008D529D /* Supporting Files */,
+			);
+			path = BlackJack;
+			sourceTree = "<group>";
+		};
+		66B73BF41A8FF428008D529D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66B73BF51A8FF428008D529D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		66B73C091A8FF428008D529D /* BlackJackTests */ = {
+			isa = PBXGroup;
+			children = (
+				66B73C0C1A8FF428008D529D /* BlackJackTests.swift */,
+				66B73C0A1A8FF428008D529D /* Supporting Files */,
+			);
+			path = BlackJackTests;
+			sourceTree = "<group>";
+		};
+		66B73C0A1A8FF428008D529D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66B73C0B1A8FF428008D529D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66B73BF01A8FF428008D529D /* BlackJack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66B73C101A8FF428008D529D /* Build configuration list for PBXNativeTarget "BlackJack" */;
+			buildPhases = (
+				66B73BED1A8FF428008D529D /* Sources */,
+				66B73BEE1A8FF428008D529D /* Frameworks */,
+				66B73BEF1A8FF428008D529D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlackJack;
+			productName = BlackJack;
+			productReference = 66B73BF11A8FF428008D529D /* BlackJack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66B73C051A8FF428008D529D /* BlackJackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66B73C131A8FF428008D529D /* Build configuration list for PBXNativeTarget "BlackJackTests" */;
+			buildPhases = (
+				66B73C021A8FF428008D529D /* Sources */,
+				66B73C031A8FF428008D529D /* Frameworks */,
+				66B73C041A8FF428008D529D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66B73C081A8FF428008D529D /* PBXTargetDependency */,
+			);
+			name = BlackJackTests;
+			productName = BlackJackTests;
+			productReference = 66B73C061A8FF428008D529D /* BlackJackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66B73BE91A8FF428008D529D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = KanChen;
+				TargetAttributes = {
+					66B73BF01A8FF428008D529D = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					66B73C051A8FF428008D529D = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 66B73BF01A8FF428008D529D;
+					};
+				};
+			};
+			buildConfigurationList = 66B73BEC1A8FF428008D529D /* Build configuration list for PBXProject "BlackJack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66B73BE81A8FF428008D529D;
+			productRefGroup = 66B73BF21A8FF428008D529D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66B73BF01A8FF428008D529D /* BlackJack */,
+				66B73C051A8FF428008D529D /* BlackJackTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66B73BEF1A8FF428008D529D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B73BFC1A8FF428008D529D /* Main.storyboard in Resources */,
+				66B73C011A8FF428008D529D /* LaunchScreen.xib in Resources */,
+				66B73BFE1A8FF428008D529D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B73C041A8FF428008D529D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66B73BED1A8FF428008D529D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B73BF91A8FF428008D529D /* ViewController.swift in Sources */,
+				66B73BF71A8FF428008D529D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B73C021A8FF428008D529D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B73C0D1A8FF428008D529D /* BlackJackTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66B73C081A8FF428008D529D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66B73BF01A8FF428008D529D /* BlackJack */;
+			targetProxy = 66B73C071A8FF428008D529D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		66B73BFA1A8FF428008D529D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66B73BFB1A8FF428008D529D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		66B73BFF1A8FF428008D529D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66B73C001A8FF428008D529D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66B73C0E1A8FF428008D529D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66B73C0F1A8FF428008D529D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66B73C111A8FF428008D529D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BlackJack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		66B73C121A8FF428008D529D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BlackJack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		66B73C141A8FF428008D529D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BlackJackTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlackJack.app/BlackJack";
+			};
+			name = Debug;
+		};
+		66B73C151A8FF428008D529D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BlackJackTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlackJack.app/BlackJack";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66B73BEC1A8FF428008D529D /* Build configuration list for PBXProject "BlackJack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66B73C0E1A8FF428008D529D /* Debug */,
+				66B73C0F1A8FF428008D529D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66B73C101A8FF428008D529D /* Build configuration list for PBXNativeTarget "BlackJack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66B73C111A8FF428008D529D /* Debug */,
+				66B73C121A8FF428008D529D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		66B73C131A8FF428008D529D /* Build configuration list for PBXNativeTarget "BlackJackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66B73C141A8FF428008D529D /* Debug */,
+				66B73C151A8FF428008D529D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66B73BE91A8FF428008D529D /* Project object */;
+}
