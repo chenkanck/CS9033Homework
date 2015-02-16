@@ -205,7 +205,7 @@ class Game {
     }
     
     func doubleEnable() -> Bool {
-        return player.score >= wager ? true :false
+        return player.score > wager ? true :false
     }
     
     func splitEnable() -> Bool {

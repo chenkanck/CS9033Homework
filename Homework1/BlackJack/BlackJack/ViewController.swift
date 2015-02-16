@@ -75,6 +75,9 @@ class ViewController: UIViewController {
             setGameButton(false)
         } else {
             resultLabel.text = "Game Continue.."
+            if !game.doubleEnable() {
+                doubleButton.enabled = false
+            }
         }
         updateUI()
         insureButton.enabled = false
