@@ -277,7 +277,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="55" y="556" width="50" height="30"/>
+                                    <rect key="frame" x="32" y="556" width="50" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="clickInsure:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dpu-Am-1i7"/>
@@ -346,10 +346,22 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="143" y="556" width="50" height="30"/>
+                                    <rect key="frame" x="102" y="556" width="50" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="clickSplit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kVh-99-OKg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YO0-G3-zmc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="surrender" backgroundImage="cardface">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="170" y="556" width="80" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="clickSurrender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iKy-jt-c0f"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -368,6 +380,7 @@
                                 <exclude reference="HrH-jo-g5i"/>
                                 <exclude reference="e9i-Ps-rVr"/>
                                 <exclude reference="zY1-iW-fNo"/>
+                                <exclude reference="YO0-G3-zmc"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -384,6 +397,7 @@
                                 <include reference="HrH-jo-g5i"/>
                                 <include reference="e9i-Ps-rVr"/>
                                 <include reference="zY1-iW-fNo"/>
+                                <include reference="YO0-G3-zmc"/>
                             </mask>
                         </variation>
                     </view>
@@ -400,6 +414,7 @@
                         <outlet property="resultLabel" destination="ISA-cD-vcx" id="8D5-BJ-En2"/>
                         <outlet property="splitButton" destination="zY1-iW-fNo" id="xga-6t-4xE"/>
                         <outlet property="standButton" destination="bTL-rH-28J" id="zQk-Wp-oCY"/>
+                        <outlet property="surrenderButton" destination="YO0-G3-zmc" id="pIa-kn-FAf"/>
                         <outlet property="wager" destination="hrQ-Z2-6Vo" id="X9Q-nk-sIF"/>
                         <outletCollection property="dealerCards" destination="97j-iB-eeL" collectionClass="NSMutableArray" id="UOV-GG-EaB"/>
                         <outletCollection property="dealerCards" destination="hE4-OD-aOF" collectionClass="NSMutableArray" id="oNz-5j-ZAL"/>

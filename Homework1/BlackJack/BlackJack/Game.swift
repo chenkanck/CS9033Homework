@@ -65,7 +65,10 @@ class Game {
     }
     
     func dealerAct () {
-        let expect = player.point.1 > 21 ? player.point.0:player.point.1
+        var expect = player.point.1 > 21 ? player.point.0:player.point.1
+        if expect > 21 {
+            expect = 0
+        }
         //reach 17
         while dealer.point.1 < 17 && dealer.cardsInHand.count<5{
             dealer.getCard(gameDeck.drawRandomCard()!)
@@ -175,6 +178,9 @@ class Game {
     }
     func draw() {
         player.gain(wager)
+    }
+    func surrender () {
+        player.gain(wager/2)
     }
     func bounce() {
         if dealer.currentState() != "blackjack" {

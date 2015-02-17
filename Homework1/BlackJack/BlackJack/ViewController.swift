@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var insureButton: UIButton!
     @IBOutlet weak var doubleButton: UIButton!
     @IBOutlet weak var splitButton: UIButton!
+    @IBOutlet weak var surrenderButton: UIButton!
     
     var game = Game()
     var dealerRound = false
@@ -45,6 +46,7 @@ class ViewController: UIViewController {
         setGameButton(true)
         
         betButton.enabled = false
+        surrenderButton.enabled = true
         if game.insuranceEnable() {
             insureButton.enabled = true
         }else {
@@ -59,6 +61,13 @@ class ViewController: UIViewController {
             splitButton.enabled = true
         }
     }
+    @IBAction func clickSurrender(sender: AnyObject) {
+        setGameButton(false)
+        setFuncButton(false)
+        game.surrender()
+        resultLabel.text = "surrender."
+        updateLabels()
+    }
     @IBAction func clickRestart(sender: AnyObject) {
          betButton.enabled = true
     }
@@ -72,6 +81,7 @@ class ViewController: UIViewController {
             resultLabel.text = "Insurance works"
             dealerRound = true
             splitButton.enabled = false
+            surrenderButton.enabled = false
             setGameButton(false)
         } else {
             resultLabel.text = "Game Continue.."
@@ -84,8 +94,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickSplit(sender: AnyObject) {
-        splitButton.enabled = false
-        doubleButton.enabled = false
+        setFuncButton(false)
         game.split()
         updateUI()
     }
@@ -110,9 +119,7 @@ class ViewController: UIViewController {
             game.splitRound++
         }
         
-        insureButton.enabled = false
-        doubleButton.enabled = false
-        splitButton.enabled = false
+        setFuncButton(false)
         
         if game.player.cardsInHand.count == 5 {
             hitButton.enabled = false
@@ -169,9 +176,7 @@ class ViewController: UIViewController {
         resultLabel.text = txt
         updateLabels()
         setGameButton(false)
-        insureButton.enabled = false
-        doubleButton.enabled = false
-        splitButton.enabled = false
+        setFuncButton(false)
     }
     func outputResult() {
         switch game.result() {
@@ -189,9 +194,7 @@ class ViewController: UIViewController {
         game.bounce()
         
         setGameButton(false)
-        insureButton.enabled = false
-        doubleButton.enabled = false
-        splitButton.enabled = false
+        setFuncButton(false)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -199,20 +202,25 @@ class ViewController: UIViewController {
 //        startRound()
         updateUI()
         setGameButton(false)
-        insureButton.enabled = false
-        splitButton.enabled = false
+        setFuncButton(false)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     func setGameButton(onOff: Bool) {
         hitButton.enabled = onOff
         standButton.enabled = onOff
         doubleButton.enabled = onOff
     }
-    
+    func setFuncButton (onOff: Bool){
+        insureButton.enabled = onOff
+        splitButton.enabled = onOff
+        surrenderButton.enabled = onOff
+        doubleButton.enabled = onOff
+    }
     func updateUI() {
         updateLabels()
         updateCards()
