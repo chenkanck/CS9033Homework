@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C62A4312-664E-435A-9C05-642C2575DB30</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BlackJack</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E3C091785457A3D0CE8BB1FAD29FF76660855536</key>
+		<string>https://github.com/chenkanck/CS9033Homework.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Homework1/BlackJack/BlackJack.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E3C091785457A3D0CE8BB1FAD29FF76660855536</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/chenkanck/CS9033Homework.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E3C091785457A3D0CE8BB1FAD29FF76660855536</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E3C091785457A3D0CE8BB1FAD29FF76660855536</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CS9033Homework</string>
+		</dict>
+	</array>
+</dict>
+</plist>
