@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var remainCards: UILabel!
     
     @IBOutlet weak var betButton: UIButton!
+    @IBOutlet weak var nextRoundButton: UIButton!
     @IBOutlet weak var hitButton: UIButton!
     @IBOutlet weak var standButton: UIButton!
     @IBOutlet weak var insureButton: UIButton!
@@ -32,6 +33,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var roundIndicator: [UILabel]!
     
+    @IBOutlet weak var advise: UILabel!
     @IBOutlet weak var playerNumLable: UILabel!
     @IBOutlet weak var deckNumLable: UILabel!
     var game = Game(numOfDecks: 3, numOfPlayers: 3)
@@ -52,7 +54,8 @@ class ViewController: UIViewController {
         setGameButton(true)
         
         betButton.enabled = false
-        surrenderButton.enabled = true
+        nextRoundButton.enabled = true
+//        surrenderButton.enabled = true
 //        if game.insuranceEnable() {
 //            insureButton.enabled = true
 //        }else {
@@ -67,19 +70,16 @@ class ViewController: UIViewController {
 //            splitButton.enabled = true
 //        }
     }
-    @IBAction func clickSurrender(sender: AnyObject) {
-//        setGameButton(false)
-//        setFuncButton(false)
-//        game.surrender()
-//        resultLabel.text = "surrender."
-//        updateLabels()
-    }
-    @IBAction func clickRestart(sender: AnyObject) {
-         betButton.enabled = true
+    
+    @IBAction func clickNextRount(sender: AnyObject) {
+        betButton.enabled = true
+        nextRoundButton.enabled = false
     }
     @IBAction func clickReset(sender: AnyObject) {
         game = Game(numOfDecks: deckNum.toInt()!, numOfPlayers: playerNum.toInt()!)
         updateUI()
+        nextRoundButton.enabled = false
+        betButton.enabled = true
     }
     
     @IBAction func clickInsure(sender: AnyObject) {
@@ -110,7 +110,13 @@ class ViewController: UIViewController {
 //        outputResult()
         
     }
-    
+    @IBAction func clickSurrender(sender: AnyObject) {
+        //        setGameButton(false)
+        //        setFuncButton(false)
+        //        game.surrender()
+        //        resultLabel.text = "surrender."
+        //        updateLabels()
+    }
     @IBAction func hit(sender: AnyObject) {
         let result = game.hit()
         if result == "end" {
@@ -135,7 +141,6 @@ class ViewController: UIViewController {
     func startRound() {
         setGameButton(false)
         insureButton.enabled = false
-       
         resultLabel.text = "Result"
         game.nextRound()
         updateUI()
@@ -208,10 +213,12 @@ class ViewController: UIViewController {
         surrenderButton.enabled = onOff
         doubleButton.enabled = onOff
     }
+    
     func updateUI() {
         updateLabels()
         updateCards()
         updateScore()
+        updataAdvise()
     }
     
     func updateLabels() {
@@ -240,10 +247,15 @@ class ViewController: UIViewController {
         //Update players Cards
         for i in 0..<(game.numOfPlayers*5) {
             var face = ""
+//            playersCards[i].backgroundColor = UIColor(red: 51, green: 112, blue: 50, alpha: 0)
+            
             if i%5 < game.players[i/5].hand.count() {
                 face = game.players[i/5].hand.contentOfCard(inIndex: i%5)
+//                playersCards[i].backgroundColor = UIColor(red: 244, green: 240, blue: 240, alpha: 100)
             }
+            
             playersCards[i].text = face
+            
         }
         //Update roundIndicator
         for index in 0..<self.roundIndicator.count {
@@ -267,6 +279,7 @@ class ViewController: UIViewController {
             }
         }
     }
+    
     func updatePlayersScore () {
         for i in 0..<self.moneyOfPlayers.count {
             if i < game.numOfPlayers {
@@ -275,6 +288,9 @@ class ViewController: UIViewController {
                 moneyOfPlayers[i].text = ""
             }
         }
+    }
+    func updataAdvise (){
+        self.advise.text = game.giveAdvise()
     }
     func updateScore() {
         dealerPoint.text = "\(game.dealer.playerPoint().0) / \(game.dealer.playerPoint().1)"

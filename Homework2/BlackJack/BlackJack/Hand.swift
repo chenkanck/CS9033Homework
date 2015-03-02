@@ -50,7 +50,13 @@ class Hand {
             point.1 += card.value().toInt()!
         }
     }
-    
+    func rankOfSecondCard () -> Int {
+        if cardsInHand[1].rank.toInt() == nil {
+            return 10
+        }else {
+            return cardsInHand[1].rank.toInt()!
+        }
+    }
     func contentOfCard(inIndex i:Int) -> String {
         return cardsInHand[i].content()
     }
@@ -64,6 +70,9 @@ class Hand {
         }
         if cardsInHand.count == 5 && point.0 <= 21 {
             return "5"
+        }
+        if point.1 == 21 || point.0 == 21 {
+            return "21"
         }
         return "normal"
     }

@@ -51,6 +51,7 @@ class Game {
         let result = hitBy(players[currentPlayer-1])
         if result != "normal" {
             currentPlayer++
+            checkBlackjack()
         }
         if allPlayerMoved() {
             dealerAct()
@@ -74,6 +75,7 @@ class Game {
             return "end"
         }else {
             currentPlayer++
+            checkBlackjack()
             return "continue"
         }
     }
@@ -191,9 +193,27 @@ class Game {
             players[index].dropHand()
             giveInitialTwoCardsToPlayer(players[index])
         }
+        checkBlackjack()
 //        splitted = false
     }
     
+    func checkBlackjack () {
+        var index = currentPlayer
+        while index <= numOfPlayers{
+            if players[index-1].currentState() == "blackjack" {
+                currentPlayer++
+            }else {
+                return
+            }
+            index++
+        }
+    }
+    func giveAdvise() -> String {
+        if dealer.hand.count() < 2 || currentPlayer > numOfPlayers {
+            return "None"
+        }
+        return players[currentPlayer-1].advise(dealerSecondCardRank: dealer.hand.rankOfSecondCard())
+    }
     private func givePlayerACard(player: Player) {
         player.getCardInHand(shoe.drawRandomCard()!)
     }

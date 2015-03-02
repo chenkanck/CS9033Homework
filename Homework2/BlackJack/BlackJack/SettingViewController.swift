@@ -15,7 +15,7 @@ class SettingViewController: UIViewController {
     let minDeck = 1
     let maxDeck = 5
     let minPlayer = 1
-    let maxPlayer = 5
+    let maxPlayer = 6
     override func viewDidLoad() {
         super.viewDidLoad()
         self.DecksNum.text = "3"
