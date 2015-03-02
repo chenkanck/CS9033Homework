@@ -13,11 +13,6 @@ class Deck {
     
     init (){
         cards = []
-        for rank in Card.validRank(){
-            for suit in Card.validSuit(){
-                self.cards.append(Card(rank: rank, suit: suit))
-            }
-        }
     }
     
     func showDeck () {
@@ -25,6 +20,18 @@ class Deck {
         for card in cards{
             println(card.content())
         }
+    }
+    func add52Cards () {
+        for rank in Card.validRank(){
+            for suit in Card.validSuit(){
+                self.cards.append(Card(rank: rank, suit: suit))
+            }
+        }
+    }
+    
+    func makeNewDeck () {
+        cards = []
+        add52Cards()
     }
     
     func drawRandomCard() -> Card? {

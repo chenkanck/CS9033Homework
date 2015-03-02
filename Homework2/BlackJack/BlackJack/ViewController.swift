@@ -9,14 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    //main board
     @IBOutlet var dealerCards: [UIButton]!
-    @IBOutlet var playerCards: [UIButton]!
-    @IBOutlet var splitCards: [UIButton]!
+    @IBOutlet var playersCards: [UILabel]!
+    
+    @IBOutlet var moneyOfPlayers: [UILabel]!
     @IBOutlet weak var dealerPoint: UILabel!
     @IBOutlet weak var playerPoint: UILabel!
     
     @IBOutlet weak var wager: UILabel!
-    @IBOutlet weak var money: UILabel!
     @IBOutlet weak var inputText: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var remainCards: UILabel!
@@ -29,9 +30,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var splitButton: UIButton!
     @IBOutlet weak var surrenderButton: UIButton!
     
-    var game = Game()
-    var dealerRound = false
+    @IBOutlet var roundIndicator: [UILabel]!
     
+    @IBOutlet weak var playerNumLable: UILabel!
+    @IBOutlet weak var deckNumLable: UILabel!
+    var game = Game(numOfDecks: 3, numOfPlayers: 3)
+    var dealerRound = false
+    var playerNum = ""
+    var deckNum = ""
     @IBAction func clickBet(sender: AnyObject) {
         let textInt = inputText.text.toInt()
         if textInt == nil || !game.bet(textInt!) {
@@ -47,98 +53,83 @@ class ViewController: UIViewController {
         
         betButton.enabled = false
         surrenderButton.enabled = true
-        if game.insuranceEnable() {
-            insureButton.enabled = true
-        }else {
-            insureButton.enabled = false
-        }
-        
-        if !game.doubleEnable() {
-            doubleButton.enabled = false
-        }
-        
-        if game.splitEnable() {
-            splitButton.enabled = true
-        }
+//        if game.insuranceEnable() {
+//            insureButton.enabled = true
+//        }else {
+//            insureButton.enabled = false
+//        }
+//        
+//        if !game.doubleEnable() {
+//            doubleButton.enabled = false
+//        }
+//        
+//        if game.splitEnable() {
+//            splitButton.enabled = true
+//        }
     }
     @IBAction func clickSurrender(sender: AnyObject) {
-        setGameButton(false)
-        setFuncButton(false)
-        game.surrender()
-        resultLabel.text = "surrender."
-        updateLabels()
+//        setGameButton(false)
+//        setFuncButton(false)
+//        game.surrender()
+//        resultLabel.text = "surrender."
+//        updateLabels()
     }
     @IBAction func clickRestart(sender: AnyObject) {
          betButton.enabled = true
     }
     @IBAction func clickReset(sender: AnyObject) {
-        game = Game()
+        game = Game(numOfDecks: deckNum.toInt()!, numOfPlayers: playerNum.toInt()!)
         updateUI()
     }
     
     @IBAction func clickInsure(sender: AnyObject) {
-        if game.insure() {
-            resultLabel.text = "Insurance works"
-            dealerRound = true
-            splitButton.enabled = false
-            surrenderButton.enabled = false
-            setGameButton(false)
-        } else {
-            resultLabel.text = "Game Continue.."
-            if !game.doubleEnable() {
-                doubleButton.enabled = false
-            }
-        }
-        updateUI()
-        insureButton.enabled = false
+//        if game.insure() {
+//            resultLabel.text = "Insurance works"
+//            dealerRound = true
+//            splitButton.enabled = false
+//            surrenderButton.enabled = false
+//            setGameButton(false)
+//        } else {
+//            resultLabel.text = "Game Continue.."
+//            if !game.doubleEnable() {
+//                doubleButton.enabled = false
+//            }
+//        }
+//        updateUI()
+//        insureButton.enabled = false
     }
-    
     @IBAction func clickSplit(sender: AnyObject) {
-        setFuncButton(false)
-        game.split()
-        updateUI()
+//        setFuncButton(false)
+//        game.split()
+//        updateUI()
     }
     @IBAction func clickDouble(sender: AnyObject) {
-        game.double()
-        dealerRound = true
-        updateUI()
-        outputResult()
+//        game.double()
+//        dealerRound = true
+//        updateUI()
+//        outputResult()
         
     }
     
     @IBAction func hit(sender: AnyObject) {
-        game.hit()
-        if !game.splitted && game.player.currentState() == "burst" {
-            resultLabel.text = "Player lose"
-            setGameButton(false)
+        let result = game.hit()
+        if result == "end" {
+            dealerRound = true
+            updateUI()
+            outputResult()
         }
-        if game.splitted && game.splitRound == 1 && game.player.currentStateForSplit() == "burst" {
-            outputResultForSplit()
-        }
-        if game.splitted && game.splitRound == 0 && game.player.currentState() == "burst" {
-            game.splitRound++
-        }
-        
         setFuncButton(false)
-        
-        if game.player.cardsInHand.count == 5 {
-            hitButton.enabled = false
-        }
+
         updateUI()
     }
     
     @IBAction func stand(sender: AnyObject) {
-        game.stand()
-        if !game.splitted {
+        if game.stand() == "end" {
             dealerRound = true
             updateUI()
             outputResult()
-        }else if game.splitRound == 2 {
-            dealerRound = true
-            updateUI()
-            outputResultForSplit()
         }
-        
+        updateUI()
     }
     
     func startRound() {
@@ -149,49 +140,41 @@ class ViewController: UIViewController {
         game.nextRound()
         updateUI()
     }
+    
     func outputResultForSplit() {
-        var txt = ""
-        switch game.result() {
-        case 1:
-            txt += "Win! "
-            game.win()
-        case 0:
-            txt += "Draw! "
-            game.draw()
-        default:
-            txt += "Lose. "
-        }
-        switch game.resultForSplit() {
-        case 1:
-            txt += "Win! "
-            game.win()
-        case 0:
-            txt += "Draw! "
-            game.draw()
-        default:
-            txt += "Lose. "
-        }
-        game.bounce()
-        
-        resultLabel.text = txt
-        updateLabels()
-        setGameButton(false)
-        setFuncButton(false)
+//        var txt = ""
+//        switch game.result() {
+//        case 1:
+//            txt += "Win! "
+//            game.win()
+//        case 0:
+//            txt += "Draw! "
+//            game.draw()
+//        default:
+//            txt += "Lose. "
+//        }
+//        switch game.resultForSplit() {
+//        case 1:
+//            txt += "Win! "
+//            game.win()
+//        case 0:
+//            txt += "Draw! "
+//            game.draw()
+//        default:
+//            txt += "Lose. "
+//        }
+//        game.bounce()
+//        
+//        resultLabel.text = txt
+//        updateLabels()
+//        setGameButton(false)
+//        setFuncButton(false)
     }
+
     func outputResult() {
-        switch game.result() {
-        case 1:
-            resultLabel.text = "Player Win!"
-            game.win()
-            updateLabels()
-        case 0:
-            resultLabel.text = "Draw!"
-            game.draw()
-            updateLabels()
-        default:
-            resultLabel.text = "Player lose"
-        }
-        game.bounce()
+        resultLabel.text = game.evaluateResult()
+        updateLabels()
+//        game.bounce()
         
         setGameButton(false)
         setFuncButton(false)
@@ -200,6 +183,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 //        startRound()
+        deckNumLable.text = deckNum
+        playerNumLable.text = playerNum
+        game = Game(numOfDecks: deckNum.toInt()!, numOfPlayers: playerNum.toInt()!)
+        initCardsLabels()
         updateUI()
         setGameButton(false)
         setFuncButton(false)
@@ -228,18 +215,19 @@ class ViewController: UIViewController {
     }
     
     func updateLabels() {
-        money.text = "\(game.player.score)"
         wager.text = "\(game.wager)"
-        remainCards.text = "\(game.gameDeck.cards.count)"
+        remainCards.text = "\(game.shoe.cards.count)"
+        updatePlayersScore()
     }
     
     func updateCards() {
         for index in 0..<dealerCards.count {
             var face = ""
-            if index < game.dealer.cardsInHand.count {
-                face = game.dealer.cardsInHand[index].content()
+            if index < game.dealer.hand.count() {
+                face = game.dealer.hand.contentOfCard(inIndex: index)
+//                face = game.dealer.cardsInHand[index].content()
             }
-            if game.dealer.cardsInHand.count > 0 && index == 0 && !dealerRound {
+            if game.dealer.hand.count() > 0 && index == 0 && !dealerRound {
                 face = "??"
             }
             dealerCards[index].setTitle(face, forState: UIControlState())
@@ -249,39 +237,48 @@ class ViewController: UIViewController {
                 dealerCards[index].setBackgroundImage(UIImage(named: "cardface"), forState: UIControlState())
             }
         }
-        
-        for index in 0..<playerCards.count {
+        //Update players Cards
+        for i in 0..<(game.numOfPlayers*5) {
             var face = ""
-            if index < game.player.cardsInHand.count {
-                face = game.player.cardsInHand[index].content()
+            if i%5 < game.players[i/5].hand.count() {
+                face = game.players[i/5].hand.contentOfCard(inIndex: i%5)
             }
-            
-            playerCards[index].setTitle(face , forState: UIControlState())
-            if face == "" {
-                playerCards[index].setBackgroundImage(UIImage(named: "cardback"), forState: UIControlState())
-            }else {
-                playerCards[index].setBackgroundImage(UIImage(named: "cardface"), forState: UIControlState())
+            playersCards[i].text = face
+        }
+        //Update roundIndicator
+        for index in 0..<self.roundIndicator.count {
+            if index == game.currentPlayer-1 {
+                roundIndicator[index].text = "🔵"
+            }else{
+                roundIndicator[index].text = ""
             }
         }
         
-        for index in 0..<splitCards.count {
-            var face = ""
-            if index < game.player.splitInHand.count {
-                face = game.player.splitInHand[index].content()
-            }
-            
-            splitCards[index].setTitle(face, forState: UIControlState())
-            if face == "" {
-                splitCards[index].setBackgroundImage(UIImage(named: "cardback"), forState: UIControlState())
+        
+    }
+    
+    func initCardsLabels() {
+        let cardsInUse = game.numOfPlayers * 5
+        for i in 0..<self.playersCards.count {
+            if i < cardsInUse {
+                self.playersCards[i].text = ""
             }else {
-                splitCards[index].setBackgroundImage(UIImage(named: "cardface"), forState: UIControlState())
+                self.playersCards[i].hidden = true
             }
         }
     }
-    
+    func updatePlayersScore () {
+        for i in 0..<self.moneyOfPlayers.count {
+            if i < game.numOfPlayers {
+                moneyOfPlayers[i].text = "\(game.players[i].score)"
+            }else {
+                moneyOfPlayers[i].text = ""
+            }
+        }
+    }
     func updateScore() {
-        dealerPoint.text = "\(game.dealer.point.0) / \(game.dealer.point.1)"
-        playerPoint.text = "\(game.player.point.0) / \(game.player.point.1)"
+        dealerPoint.text = "\(game.dealer.playerPoint().0) / \(game.dealer.playerPoint().1)"
+        playerPoint.text = "\(game.players[0].playerPoint().0) / \(game.players[0].playerPoint().1)"
     }
     
     func messageBox() {
