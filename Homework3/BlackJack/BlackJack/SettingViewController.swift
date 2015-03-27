@@ -11,6 +11,7 @@ import UIKit
 class SettingViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(textField: UITextField) {
         DecksNum.resignFirstResponder()
+        PlayerNumber.resignFirstResponder()
     }
     
     @IBOutlet weak var DecksNum: UITextField!
@@ -18,7 +19,7 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
     let minDeck = 1
     let maxDeck = 5
     let minPlayer = 1
-    let maxPlayer = 6
+    let maxPlayer = 5
     override func viewDidLoad() {
         super.viewDidLoad()
         self.DecksNum.text = "3"

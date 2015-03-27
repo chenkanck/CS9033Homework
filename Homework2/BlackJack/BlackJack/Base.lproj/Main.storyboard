@@ -1052,6 +1052,9 @@
                                         <include reference="zbs-un-2ab"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="lks-V6-Oub" id="CGf-1X-bHa"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8dc-AS-5cr">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -1168,7 +1171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yeu-UB-1RC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1200" y="0.0"/>
+            <point key="canvasLocation" x="-1345" y="3.75"/>
         </scene>
     </scenes>
     <resources>
