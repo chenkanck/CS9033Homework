@@ -18,16 +18,18 @@ class Game {
     
     let numOfDecks: Int
     let numOfPlayers: Int
-    
-    init(numOfDecks: Int, numOfPlayers: Int) {
+    let numOfHuman: Int
+    init(numOfDecks: Int, numOfPlayers: Int, numOfHuman: Int) {
         self.numOfDecks = numOfDecks
         self.numOfPlayers = numOfPlayers
+        self.numOfHuman = numOfHuman
         self.leftTimes = 5
         self.dealer = Player()
         self.players = []
         for _ in 0..<numOfPlayers {
             self.players.append(Player())
         }
+        
         self.shoe = Shoe(numberOfDecks: numOfDecks)
         shoe.makeNewShoe()
         self.currentPlayer = 1
@@ -46,7 +48,7 @@ class Game {
         }
         return true
     }
-    
+   
     func hit() -> String{
         let result = hitBy(players[currentPlayer-1])
         if result != "normal" {
@@ -54,6 +56,7 @@ class Game {
             checkBlackjack()
         }
         if allPlayerMoved() {
+            aiAct()
             dealerAct()
             return "end"
         }
@@ -66,14 +69,23 @@ class Game {
     }
     
     func allPlayerMoved() -> Bool{
-        return currentPlayer > numOfPlayers
+//        return currentPlayer > numOfPlayers
+        return currentPlayer > numOfHuman
     }
     
     func stand () -> String {
-        if (currentPlayer == numOfPlayers) {
+//        if (currentPlayer == numOfPlayers) {
+//            dealerAct()
+//            return "end"
+//        }
+        
+        if currentPlayer == numOfHuman {
+            currentPlayer++
+            aiAct()
             dealerAct()
             return "end"
-        }else {
+        }
+        else {
             currentPlayer++
             checkBlackjack()
             return "continue"
@@ -106,8 +118,10 @@ class Game {
             }
             index++
         }
+        if allPlayerMoved() {
+            aiAct()
+        }
     }
-    
     
     private func givePlayerACard(player: Player) {
         player.getCardInHand(shoe.drawRandomCard()!)
@@ -119,6 +133,23 @@ class Game {
     }
     
     // MARK: - AI Part
+    func aiAct() {
+        while currentPlayer <= numOfPlayers {
+            var hint = getHint()
+            while hint == "hit" {
+                
+                var result = hitBy(players[currentPlayer-1])
+                if result != "normal" {
+                    break
+                }
+                hint = getHint()
+            }
+            currentPlayer++
+            checkBlackjack()
+        }
+        
+    }
+    
     func dealerAct () {
         var playerPoint = players[0].playerPoint()
         var expect = playerPoint.1 > 21 ? playerPoint.0:playerPoint.1
@@ -142,6 +173,11 @@ class Game {
         if dealer.hand.count() < 2 || currentPlayer > numOfPlayers {
             return "None"
         }
+        return players[currentPlayer-1].advise(dealerSecondCardRank: dealer.hand.rankOfSecondCard())
+        // modify mark
+    }
+    
+    private func getHint() -> String {
         return players[currentPlayer-1].advise(dealerSecondCardRank: dealer.hand.rankOfSecondCard())
     }
     // MARK: - Result Process

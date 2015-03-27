@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lks-V6-Oub">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -127,186 +128,193 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zzf-VZ-Zge" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="160" y="96" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="Zzf-VZ-Zge" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="187" y="93" width="49" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hdn-0R-Pj9" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="112" y="96" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="hdn-0R-Pj9" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="130" y="93" width="49" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HZu-fl-0T2" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="16" y="96" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="HZu-fl-0T2" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="16" y="93" width="49" height="68"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="Cbl-on-HkV"/>
                                     <constraint firstAttribute="width" constant="40" id="SE7-hk-cdJ"/>
                                     <constraint firstAttribute="height" constant="57" id="ogk-et-z3I"/>
+                                    <constraint firstAttribute="width" secondItem="HZu-fl-0T2" secondAttribute="height" multiplier="40:56" id="pHU-CK-Oiw"/>
+                                    <constraint firstAttribute="width" constant="49" id="sQn-dk-3AQ"/>
                                     <constraint firstAttribute="height" constant="57" id="whP-R7-6eX"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="Cbl-on-HkV"/>
+                                        <exclude reference="SE7-hk-cdJ"/>
+                                        <exclude reference="ogk-et-z3I"/>
+                                        <exclude reference="sQn-dk-3AQ"/>
                                         <exclude reference="whP-R7-6eX"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular">
                                     <mask key="constraints">
-                                        <include reference="whP-R7-6eX"/>
+                                        <exclude reference="whP-R7-6eX"/>
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="44J-Jw-9KE" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="208" y="96" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="44J-Jw-9KE" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="244" y="93" width="48" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dOg-xR-a0S" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="64" y="96" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="dOg-xR-a0S" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="73" y="93" width="49" height="68"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Money" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNo-vR-aqZ">
-                                <rect key="frame" x="307" y="161" width="52" height="21"/>
+                                <rect key="frame" x="307" y="166" width="52" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuJ-vj-wRJ">
-                                <rect key="frame" x="330" y="190" width="29" height="21"/>
+                                <rect key="frame" x="330" y="192" width="29" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYf-g7-dgf">
-                                <rect key="frame" x="330" y="255" width="29" height="21"/>
+                                <rect key="frame" x="330" y="268" width="29" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cz-eo-DO8">
-                                <rect key="frame" x="330" y="320" width="29" height="21"/>
+                                <rect key="frame" x="330" y="344" width="29" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🔵" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9S-XA-Fcz">
-                                <rect key="frame" x="0.0" y="190" width="22" height="21"/>
+                                <rect key="frame" x="0.0" y="192" width="22" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🔵" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYx-vu-pjX">
-                                <rect key="frame" x="0.0" y="255" width="22" height="21"/>
+                                <rect key="frame" x="0.0" y="268" width="22" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🔵" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxc-fJ-mvy">
-                                <rect key="frame" x="0.0" y="320" width="22" height="21"/>
+                                <rect key="frame" x="0.0" y="344" width="22" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🔵" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6D-gG-hv6">
-                                <rect key="frame" x="0.0" y="385" width="22" height="21"/>
+                                <rect key="frame" x="0.0" y="419" width="22" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🔵" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R36-AS-CMd">
-                                <rect key="frame" x="0.0" y="450" width="22" height="21"/>
+                                <rect key="frame" x="0.0" y="495" width="22" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vhm-BM-Xrs" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="30" y="190" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="vhm-BM-Xrs" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="30" y="192" width="49" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IAG-aO-QA3" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="30" y="255" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="IAG-aO-QA3" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="30" y="268" width="49" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0wd-xu-IJy" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="30" y="320" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="0wd-xu-IJy" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="30" y="344" width="49" height="67"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ekE-Lr-kXk" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="78" y="320" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="ekE-Lr-kXk" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="87" y="344" width="49" height="67"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xf0-3r-8OU" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="126" y="320" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="xf0-3r-8OU" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="144" y="344" width="49" height="67"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QxZ-Bg-jah" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="174" y="320" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="QxZ-Bg-jah" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="201" y="344" width="49" height="67"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hk4-hi-S54" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="222" y="320" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="hk4-hi-S54" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="258" y="344" width="48" height="67"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hZ9-lt-H9b" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="30" y="385" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="hZ9-lt-H9b" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="30" y="419" width="49" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ebq-mq-5px" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="78" y="255" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="ebq-mq-5px" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="87" y="268" width="49" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ktr-5j-xaT" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="126" y="255" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="ktr-5j-xaT" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="144" y="268" width="49" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oza-Bg-eBr" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="174" y="255" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="Oza-Bg-eBr" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="201" y="268" width="49" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yr7-lk-29C" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="222" y="255" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="yr7-lk-29C" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="258" y="268" width="48" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uB8-bm-OBd" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="78" y="190" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="uB8-bm-OBd" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="87" y="192" width="49" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MCk-ar-hj7" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="126" y="190" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="MCk-ar-hj7" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="144" y="192" width="49" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Gq-sz-63j" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="174" y="190" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="9Gq-sz-63j" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="201" y="192" width="49" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qon-KL-bbs" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="222" y="190" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="qon-KL-bbs" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="258" y="192" width="48" height="68"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Cards" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WM3-9u-XMD">
-                                <rect key="frame" x="16" y="161" width="99" height="21"/>
+                                <rect key="frame" x="16" y="166" width="99" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5i-Ds-tZG">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5i-Ds-tZG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="HnB-SM-5nQ"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rni-bd-ut5" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="78" y="385" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="rni-bd-ut5" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="87" y="419" width="49" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KGJ-Q2-W0Q" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="126" y="385" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="KGJ-Q2-W0Q" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="144" y="419" width="49" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xTf-I5-hFS" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="174" y="385" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="xTf-I5-hFS" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="201" y="419" width="49" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UPF-Kz-Vfj" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="222" y="385" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="UPF-Kz-Vfj" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="258" y="419" width="48" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TGu-RZ-OLN" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="30" y="450" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="TGu-RZ-OLN" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="30" y="495" width="49" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OrW-ed-9V6" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="78" y="450" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="OrW-ed-9V6" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="87" y="495" width="49" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mc0-Va-GDg" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="126" y="450" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="mc0-Va-GDg" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="144" y="495" width="49" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sAe-Lf-NJd" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="174" y="450" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="sAe-Lf-NJd" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="201" y="495" width="49" height="68"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xRz-kL-qiu" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
-                                <rect key="frame" x="222" y="450" width="40" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="xRz-kL-qiu" customClass="CardImageView" customModule="BlackJack" customModuleProvider="target">
+                                <rect key="frame" x="258" y="495" width="48" height="68"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kz1-0j-QYg">
-                                <rect key="frame" x="330" y="385" width="29" height="21"/>
+                                <rect key="frame" x="330" y="419" width="29" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hz9-BT-KPG">
-                                <rect key="frame" x="330" y="450" width="29" height="21"/>
+                                <rect key="frame" x="330" y="495" width="29" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -416,10 +424,12 @@
                             <constraint firstItem="uB8-bm-OBd" firstAttribute="leading" secondItem="vhm-BM-Xrs" secondAttribute="trailing" constant="8" symbolic="YES" id="2rC-Or-lB1"/>
                             <constraint firstItem="hZ9-lt-H9b" firstAttribute="height" secondItem="0wd-xu-IJy" secondAttribute="height" id="3Fb-OQ-bme"/>
                             <constraint firstItem="uB8-bm-OBd" firstAttribute="bottom" secondItem="MCk-ar-hj7" secondAttribute="bottom" id="3Sh-pd-pbS"/>
+                            <constraint firstItem="gNo-vR-aqZ" firstAttribute="top" secondItem="HZu-fl-0T2" secondAttribute="bottom" constant="5" id="5da-oX-DE0"/>
                             <constraint firstItem="Zzf-VZ-Zge" firstAttribute="leading" secondItem="hdn-0R-Pj9" secondAttribute="trailing" constant="8" symbolic="YES" id="63o-2D-dm8"/>
                             <constraint firstItem="8VZ-8t-v9s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="77i-kk-qj7"/>
                             <constraint firstItem="WM3-9u-XMD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7Lg-5B-MYF"/>
                             <constraint firstItem="gYf-g7-dgf" firstAttribute="top" secondItem="yr7-lk-29C" secondAttribute="top" id="7VH-JG-Pnt"/>
+                            <constraint firstItem="eX5-lz-TC3" firstAttribute="top" secondItem="TGu-RZ-OLN" secondAttribute="bottom" constant="8" symbolic="YES" id="7iu-kX-STN"/>
                             <constraint firstItem="B6D-gG-hv6" firstAttribute="leading" secondItem="Gxc-fJ-mvy" secondAttribute="leading" id="7yK-gW-hzT"/>
                             <constraint firstItem="pi1-9h-0UX" firstAttribute="baseline" secondItem="O1e-2s-Ilg" secondAttribute="baseline" id="8Ck-5o-RaC"/>
                             <constraint firstItem="IAG-aO-QA3" firstAttribute="centerX" secondItem="vhm-BM-Xrs" secondAttribute="centerX" id="8Fj-Gh-ap7"/>
@@ -430,7 +440,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="e9i-Ps-rVr" secondAttribute="trailing" id="AET-qE-wRw">
                                 <variation key="heightClass=regular" constant="0.0"/>
                             </constraint>
-                            <constraint firstItem="WM3-9u-XMD" firstAttribute="top" secondItem="HZu-fl-0T2" secondAttribute="bottom" constant="8" symbolic="YES" id="ASt-u9-G9A"/>
+                            <constraint firstItem="WM3-9u-XMD" firstAttribute="top" secondItem="HZu-fl-0T2" secondAttribute="bottom" constant="5" id="ASt-u9-G9A"/>
                             <constraint firstItem="qon-KL-bbs" firstAttribute="width" secondItem="9Gq-sz-63j" secondAttribute="width" id="AYk-0y-p9J"/>
                             <constraint firstItem="44J-Jw-9KE" firstAttribute="width" secondItem="Zzf-VZ-Zge" secondAttribute="width" id="B9Y-dh-fMA"/>
                             <constraint firstItem="MCk-ar-hj7" firstAttribute="height" secondItem="9Gq-sz-63j" secondAttribute="height" id="BAS-TR-JDD"/>
@@ -492,12 +502,12 @@
                             <constraint firstItem="xTf-I5-hFS" firstAttribute="height" secondItem="KGJ-Q2-W0Q" secondAttribute="height" id="PN9-zf-k7N"/>
                             <constraint firstItem="xf0-3r-8OU" firstAttribute="leading" secondItem="ekE-Lr-kXk" secondAttribute="trailing" constant="8" symbolic="YES" id="PhV-d5-dvC"/>
                             <constraint firstItem="IAG-aO-QA3" firstAttribute="bottom" secondItem="ebq-mq-5px" secondAttribute="bottom" id="Q4q-mw-GQf"/>
-                            <constraint firstItem="fuJ-vj-wRJ" firstAttribute="top" secondItem="gNo-vR-aqZ" secondAttribute="bottom" constant="8" symbolic="YES" id="QEW-Xz-td0">
+                            <constraint firstItem="fuJ-vj-wRJ" firstAttribute="top" secondItem="gNo-vR-aqZ" secondAttribute="bottom" constant="5" id="QEW-Xz-td0">
                                 <variation key="heightClass=regular" constant="8" symbolic="YES"/>
                             </constraint>
                             <constraint firstItem="IAG-aO-QA3" firstAttribute="width" secondItem="vhm-BM-Xrs" secondAttribute="width" id="RdJ-AZ-Dta"/>
                             <constraint firstItem="vhm-BM-Xrs" firstAttribute="leading" secondItem="e9S-XA-Fcz" secondAttribute="trailing" constant="8" symbolic="YES" id="RhT-BL-N56"/>
-                            <constraint firstItem="vhm-BM-Xrs" firstAttribute="top" secondItem="WM3-9u-XMD" secondAttribute="bottom" constant="8" symbolic="YES" id="Rzj-L6-itO"/>
+                            <constraint firstItem="vhm-BM-Xrs" firstAttribute="top" secondItem="WM3-9u-XMD" secondAttribute="bottom" constant="5" id="Rzj-L6-itO"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8VZ-8t-v9s" secondAttribute="bottom" constant="8" symbolic="YES" id="T15-mZ-acf">
                                 <variation key="heightClass=regular" constant="8" symbolic="YES"/>
                             </constraint>
@@ -597,7 +607,7 @@
                             <constraint firstItem="hdn-0R-Pj9" firstAttribute="width" secondItem="Zzf-VZ-Zge" secondAttribute="width" id="rGD-2d-htJ"/>
                             <constraint firstItem="hZ9-lt-H9b" firstAttribute="height" secondItem="TGu-RZ-OLN" secondAttribute="height" id="rIn-FV-gLp"/>
                             <constraint firstItem="pi1-9h-0UX" firstAttribute="leading" secondItem="O1e-2s-Ilg" secondAttribute="trailing" constant="8" symbolic="YES" id="rxa-CB-N0B"/>
-                            <constraint firstItem="e9S-XA-Fcz" firstAttribute="top" secondItem="WM3-9u-XMD" secondAttribute="bottom" constant="8" symbolic="YES" id="sfZ-4E-UO6"/>
+                            <constraint firstItem="e9S-XA-Fcz" firstAttribute="top" secondItem="WM3-9u-XMD" secondAttribute="bottom" constant="5" id="sfZ-4E-UO6"/>
                             <constraint firstItem="NyB-O1-bE0" firstAttribute="leading" secondItem="pi1-9h-0UX" secondAttribute="trailing" constant="8" symbolic="YES" id="stM-oe-Tn3"/>
                             <constraint firstItem="43I-Y7-lmc" firstAttribute="bottom" secondItem="PTT-ye-4QP" secondAttribute="bottom" id="tbE-TD-gsS"/>
                             <constraint firstItem="ebq-mq-5px" firstAttribute="height" secondItem="ktr-5j-xaT" secondAttribute="height" id="tvT-IY-MnC"/>
@@ -626,7 +636,7 @@
                             <constraint firstItem="GtT-aZ-Uim" firstAttribute="bottom" secondItem="YVJ-im-spQ" secondAttribute="bottom" id="xGJ-pT-dEu"/>
                             <constraint firstItem="44J-Jw-9KE" firstAttribute="bottom" secondItem="Zzf-VZ-Zge" secondAttribute="bottom" id="yAT-bi-bUu"/>
                             <constraint firstItem="y3c-jy-aDJ" firstAttribute="top" secondItem="z5i-Ds-tZG" secondAttribute="bottom" id="yIc-Gr-VRT"/>
-                            <constraint firstItem="HZu-fl-0T2" firstAttribute="top" secondItem="e9i-Ps-rVr" secondAttribute="bottom" constant="8" symbolic="YES" id="yhX-DI-hqR"/>
+                            <constraint firstItem="HZu-fl-0T2" firstAttribute="top" secondItem="e9i-Ps-rVr" secondAttribute="bottom" constant="5" id="yhX-DI-hqR"/>
                             <constraint firstItem="hdn-0R-Pj9" firstAttribute="height" secondItem="Zzf-VZ-Zge" secondAttribute="height" id="yiR-aX-8Dk"/>
                             <constraint firstItem="TGu-RZ-OLN" firstAttribute="width" secondItem="OrW-ed-9V6" secondAttribute="width" id="zCQ-Fj-Wgw"/>
                             <constraint firstItem="uB8-bm-OBd" firstAttribute="height" secondItem="MCk-ar-hj7" secondAttribute="height" id="zjj-JG-x4A"/>
@@ -764,14 +774,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TGR-Cx-zeI">
-                                <rect key="frame" x="163" y="164" width="50" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TGR-Cx-zeI">
+                                <rect key="frame" x="276" y="164" width="50" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="S3S-2o-Lx9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular">
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="276" y="164" width="50" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="276" y="112" width="50" height="30"/>
                                     <mask key="constraints">
                                         <include reference="S3S-2o-Lx9"/>
                                     </mask>
@@ -780,14 +794,18 @@
                                     <outlet property="delegate" destination="lks-V6-Oub" id="CGf-1X-bHa"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8dc-AS-5cr">
-                                <rect key="frame" x="163" y="230" width="50" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8dc-AS-5cr">
+                                <rect key="frame" x="276" y="230" width="50" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="b4g-kE-pX7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular">
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="276" y="230" width="50" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="276" y="178" width="50" height="30"/>
                                     <mask key="constraints">
                                         <include reference="b4g-kE-pX7"/>
                                     </mask>
@@ -799,11 +817,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Player(1-5)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6b8-PL-Io2">
-                                <rect key="frame" x="106" y="202" width="163" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Number of Human Player(1-5)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6b8-PL-Io2">
+                                <rect key="frame" x="191" y="202" width="220" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="107" y="202" width="163" height="20"/>
+                                </variation>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="107" y="150" width="163" height="20"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Number of Decks(1-5)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oh-Xz-DSg">
                                 <rect key="frame" x="16" y="136" width="343" height="20"/>
@@ -811,8 +835,8 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1s-Ee-Pew">
-                                <rect key="frame" x="125" y="310" width="127" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1s-Ee-Pew">
+                                <rect key="frame" x="126" y="277" width="127" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="127" id="qlT-Mk-hTC"/>
                                 </constraints>
@@ -820,7 +844,11 @@
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="heightClass=regular">
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="126" y="177" width="127" height="48"/>
+                                </variation>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="125" y="377" width="127" height="48"/>
                                     <mask key="constraints">
                                         <include reference="qlT-Mk-hTC"/>
                                     </mask>
@@ -884,12 +912,12 @@
                                 <include reference="byW-oP-RM7"/>
                                 <include reference="obH-yq-9g9"/>
                                 <include reference="uiW-qR-De6"/>
-                                <include reference="OFN-aV-vv8"/>
-                                <include reference="hT2-kI-iXe"/>
                                 <include reference="BKp-5q-0QC"/>
                                 <include reference="VwI-iE-9UV"/>
                                 <include reference="227-uB-5pY"/>
                                 <include reference="tt3-ak-4Ka"/>
+                                <include reference="OFN-aV-vv8"/>
+                                <include reference="hT2-kI-iXe"/>
                             </mask>
                         </variation>
                     </view>

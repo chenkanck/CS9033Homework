@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var advise: UILabel!
     @IBOutlet weak var playerNumLable: UILabel!
     @IBOutlet weak var deckNumLable: UILabel!
-    var game = Game(numOfDecks: 3, numOfPlayers: 3)
+    var game = Game(numOfDecks: 3, numOfPlayers: 5, numOfHuman: 3)
     var dealerRound = false
     var playerNum = ""
     var deckNum = ""
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         setGameButton(true)
         
         betButton.enabled = false
-        nextRoundButton.enabled = true
+        nextRoundButton.enabled = false
 
     }
     
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         nextRoundButton.enabled = false
     }
     @IBAction func clickReset(sender: AnyObject) {
-        game = Game(numOfDecks: deckNum.toInt()!, numOfPlayers: playerNum.toInt()!)
+        game = Game(numOfDecks: deckNum.toInt()!, numOfPlayers: 5, numOfHuman: playerNum.toInt()!)
         updateUI()
         nextRoundButton.enabled = false
         betButton.enabled = true
@@ -96,7 +96,7 @@ class ViewController: UIViewController {
     func outputResult() {
         resultLabel.text = game.evaluateResult()
         updateLabels()
-        
+        nextRoundButton.enabled = true
         setGameButton(false)
     }
     override func viewDidLoad() {
@@ -104,7 +104,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         deckNumLable.text = deckNum
         playerNumLable.text = playerNum
-        game = Game(numOfDecks: deckNum.toInt()!, numOfPlayers: playerNum.toInt()!)
+        game = Game(numOfDecks: deckNum.toInt()!, numOfPlayers: 5, numOfHuman: playerNum.toInt()!)
         initCardsLabels()
         updateUI()
         setGameButton(false)
