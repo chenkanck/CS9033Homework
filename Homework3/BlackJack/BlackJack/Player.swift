@@ -12,7 +12,7 @@ class Player {
     var score:Int
     let minimum:Int
     var hand: Hand
-
+    var wager: Int = 1
     init () {
         self.hand = Hand()
         self.score = 100

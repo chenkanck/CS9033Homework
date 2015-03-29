@@ -19,6 +19,16 @@ class Game {
     let numOfDecks: Int
     let numOfPlayers: Int
     let numOfHuman: Int
+    
+    var currentBet: Int
+    
+    func clearAllCard() {
+        dealer.dropHand()
+        for index in 0..<self.numOfPlayers {
+            players[index].dropHand()
+        }
+    }
+    
     init(numOfDecks: Int, numOfPlayers: Int, numOfHuman: Int) {
         self.numOfDecks = numOfDecks
         self.numOfPlayers = numOfPlayers
@@ -33,20 +43,39 @@ class Game {
         self.shoe = Shoe(numberOfDecks: numOfDecks)
         shoe.makeNewShoe()
         self.currentPlayer = 1
+        self.currentBet = 1
     }
     
     // MARK: - Methods
     
     func bet (wager: Int)-> Bool  {
-        for i in 0..<numOfPlayers {
-            let temp = players[i].bet(wager)
-            if temp != nil {
-                self.wager = temp!
-            }else {
-                return false
-            }
+        let temp = players[currentBet-1].bet(wager)
+        if temp != nil {
+            players[currentBet-1].wager = temp!
+            currentBet++
+            self.wager = temp!
+            return true
+        }else {
+            return false
         }
-        return true
+    }
+    
+    func playersBetFinished() -> Bool {
+        return currentBet > numOfHuman
+    }
+    
+    func aiBet() {
+        for var i = currentBet; i <= numOfPlayers; i++ {
+            var wage = 2
+            if players[i-1].score >= 100 {
+                wage = 10
+            }else if players[i-1].score >= 60 {
+                wage = 6
+            }
+            let tmp = players[i-1].bet(wage)
+            players[i-1].wager = wage
+        }
+        currentBet = 1
     }
    
     func hit() -> String{
@@ -88,6 +117,9 @@ class Game {
         else {
             currentPlayer++
             checkBlackjack()
+            if allPlayerMoved() {
+                return "end"
+            }
             return "continue"
         }
     }
@@ -114,13 +146,16 @@ class Game {
             if players[index-1].currentState() == "blackjack" {
                 currentPlayer++
             }else {
+                if allPlayerMoved() {
+                    aiAct()
+                }
                 return
             }
             index++
         }
-        if allPlayerMoved() {
-            aiAct()
-        }
+//        if allPlayerMoved() {
+//            aiAct()
+//        }
     }
     
     private func givePlayerACard(player: Player) {
@@ -234,10 +269,10 @@ class Game {
     }
     
     func winBy(person: Player) {
-        person.gain(wager * 2)
+        person.gain(person.wager * 2)
     }
     func drawBy (person: Player) {
-        person.gain(wager)
+        person.gain(person.wager)
     }
     
     //    func bounce() {

@@ -42,6 +42,11 @@ class ViewController: UIViewController {
             messageBox()
             return
         }
+        if !game.playersBetFinished() {
+            updateLabels()
+            return
+        }
+        game.aiBet()
         
         dealerRound = false
         startRound()
@@ -55,6 +60,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickNextRount(sender: AnyObject) {
+        game.clearAllCard()
+        updateUI()
         betButton.enabled = true
         nextRoundButton.enabled = false
     }
@@ -108,6 +115,7 @@ class ViewController: UIViewController {
         initCardsLabels()
         updateUI()
         setGameButton(false)
+        nextRoundButton.enabled = false
     }
 
   
